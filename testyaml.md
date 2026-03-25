@@ -1,0 +1,15 @@
+```yaml
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run build
+        run: npm install && npm run build
+```
